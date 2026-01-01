@@ -1,0 +1,112 @@
+/* PAGE WRAPPER */
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  padding: 20px;
+}
+
+/* CARD */
+.login-container {
+  width: 100%;
+  max-width: 420px;
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 24px 22px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* TITLE */
+.login-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* FORM */
+.login-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* INPUTS */
+.login-container input {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 14px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border 0.2s ease;
+}
+
+.login-container input:focus {
+  border-color: #ff6a00;
+}
+
+/* BUTTON */
+.login-container button {
+  margin-top: 10px;
+  padding: 12px;
+  border-radius: 6px;
+  border: none;
+  background: #ff6a00;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.login-container button:hover {
+  background: #e65c00;
+}
+
+/* ERROR MESSAGE */
+.error {
+  margin-top: 14px;
+  text-align: center;
+  color: #d00000;
+  font-size: 0.9rem;
+}
+
+/* -------------------------
+   TABLET
+------------------------- */
+@media (min-width: 600px) {
+  .login-container {
+    padding: 30px;
+  }
+
+  .login-container h2 {
+    font-size: 1.6rem;
+  }
+}
+
+/* -------------------------
+   DESKTOP
+------------------------- */
+@media (min-width: 1024px) {
+  .login-page {
+    padding: 40px;
+  }
+}
+
+
+/* LOGIN LINK */
+.signup-login {
+  margin-top: 16px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.signup-login button {
+  background: none;
+  border: none;
+  color: #ff6a00;
+  cursor: pointer;
+  font-size: 0.9rem;
+  padding: 0;
+}

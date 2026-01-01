@@ -1,0 +1,338 @@
+.cart-page {
+  padding: 0px;
+  color: rgb(6, 6, 6);
+}
+
+.cart-page h2 {
+  text-align: center;
+  margin: 20px 0px;
+  font-size: xx-large;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  text-transform: capitalize;
+}
+
+.cart-container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  width: 100%;
+  margin-bottom: 100px;
+  padding: 10px;
+}
+
+.cart-loading {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.empty-cart {
+  text-align: center;
+  opacity: 0.7;
+}
+
+.cart-list {
+  /* left container */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 50%;
+  min-height: auto;
+  max-height: 80vh;
+  overflow-y: auto;
+  gap: 14px;
+  border-radius: 10px;
+  padding: 0px 10px 15px 10px;
+  background-color: #00000000;
+}
+
+.product_preview {
+  /* right container */
+  width: 100%;
+  min-height: auto;
+  max-height: auto;
+  padding: 10px 0px 0px 0px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #eeeeee;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.product_image {
+  margin: 10px;
+  width: 280px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.product_image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.product {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+}
+
+.product .detail {
+  max-width: 60%;
+  margin: 0px 20px 10px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+.detail h4{
+  text-align: right;
+}
+
+.cart-page h2{
+  font-size: x-large;
+  text-align: left;
+}
+
+.product .detail .price{
+  font-weight: 700;
+}
+
+.remove_btn {
+  margin: 10px 0px;
+  background-color: red;
+  border: 2px solid red;
+  border-radius: 5px;
+  color: white;
+  transition: .2s;
+  padding: 3px;
+  font-weight: 600;
+}
+
+.remove_btn:hover {
+  background-color: white;
+  border: 2px solid red;
+  color: black;
+}
+
+.cart-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  background: #eeeeee;
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(18, 18, 19, 0.046);
+  transition:
+    box-shadow 0.25s ease,
+    transform 0.25s ease,
+    padding 0.25s ease;
+}
+
+.cart-card:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+.cart-card .image {
+  gap: 10px;
+  width: 50%;
+  height: 50%;
+  text-align: start;
+  object-fit: cover;
+}
+
+.cart-card .detail {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-end;
+  gap: 10px;
+  text-align: end;
+  background-color: rgba(245, 245, 220, 0.009);
+}
+
+.cart-card .image img {
+  border-radius: 5px;
+  width: 100px;
+  min-height: 120px;
+  max-height: 130px;
+  object-fit: contain;
+}
+
+.cart-card h4 {
+  margin-bottom: 6px;
+  font-size: smaller;
+}
+
+.quantity-control {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.quantity-control input {
+  border: 1px solid rgba(0, 0, 0, 0.005);
+  text-align: center;
+  width: 20%;
+  height: 20px;
+}
+
+.quantity-control button {
+  width: 20px;
+  height: 20px;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cart-card .total {
+  font-weight: bold;
+  margin-top: 6px;
+}
+
+
+.product_preview footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 98%;
+  height: 50px;
+  font-size: larger;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 30px 10px 10px 10px;
+  border: 0px solid rgb(37, 36, 36);
+  box-shadow:
+    0 5px 25px rgba(82, 82, 82, 0.16);
+}
+
+footer button {
+  background-image: linear-gradient(0deg, #8028d9 50%, #d9d9d9 125%);
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #d9d9d9;
+  text-wrap: nowrap;
+  font-weight: 700;
+  border: 1px solid hsla(270, 83%, 58%, 0.5);
+  border-radius: 10px;
+  box-shadow: inset 0 0 0.25rem 1px #d9d9d9;
+}
+
+footer button:hover {
+  background-image: linear-gradient(0deg, #6902d0 50%, #d9d9d9 125%);
+  border: 1px solid hsla(270, 90%, 36%, 0.5);
+}
+
+
+@media screen and (max-width: 444px) {
+  .cart-container {
+    flex-direction: column-reverse;
+  }
+
+  .cart-page h2 {
+    text-align: center;
+    margin: 20px 0px 10px 0px;
+    font-size: large;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+
+  .cart-list {
+    /* left container */
+    width: 100%;
+    height: auto;
+  }
+
+  .product_preview footer {
+    font-size: small;
+  }
+
+  .product_preview {
+    /* right container */
+    width: 100%;
+  }
+
+  .product {
+    flex-direction: column;
+  }
+
+  .product .detail {
+    margin: 10px;
+    align-items: center;
+  }
+
+}
+
+
+@media screen and (max-width: 790px) {
+  .cart-container {
+    flex-direction: column-reverse;
+  }
+
+  .cart-page h2 {
+    text-align: center;
+    margin: 20px 0px 10px 0px;
+    font-size: large;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+
+  .cart-list {
+    /* left container */
+    width: 100%;
+    height: auto;
+  }
+
+  .product_preview footer {
+    font-size: small;
+  }
+
+  .product_preview {
+    /* right container */
+    width: 100%;
+
+  }
+
+  .product {
+    flex-direction: column;
+  }
+
+  .product .detail {
+    margin: 10px;
+    align-items: center;
+  }
+
+}
+
+
+@media screen and (max-width: 1324px) {
+
+  .product_preview {
+    width: 100%;
+  }
+  .product .detail h2{
+    font-size: x-large;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .product .detail h2{
+    font-size: large;
+  }
+}

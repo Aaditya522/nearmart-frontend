@@ -1,0 +1,285 @@
+.admin-container {
+  width: 100%;
+  margin: 30px auto 30px auto;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.main-tabs {
+  position: fixed;
+  top: 90px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  z-index: 1000;
+
+  margin: 5px 0px;
+  width: 98%;
+  display: flex;
+  gap: 12px;
+  padding:5px;
+  background-color: #3333331f;
+  border: 2px solid #48454a13;
+  border-radius: 30px;
+  backdrop-filter: blur(6px);
+}
+
+.main-tabs button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  background: #e0e0e006;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  color: black;
+  transition: .5s;
+  border: 2px solid #05050500;
+}
+
+.main-tabs button.active {
+  border: 2px solid #48454a13;
+  background: #121212;
+  color: #fff;
+}
+
+.main-tabs button:hover {
+  color: rgb(2, 2, 2);
+  border: 2px solid #000000;
+  background-color: #05050506;
+}
+
+.flex-div {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  gap: 20px;
+}
+
+@media screen and (max-width: 420px) {
+
+  .main-tabs {
+    position: fixed;
+    top: 90px;
+
+  }
+}
+
+@media screen and (min-width: 444px) and (max-width: 600px) {
+  .flex-div {
+    flex-direction: column;
+  }
+  .main-tabs {
+    position: fixed;
+    top: 100px;
+
+  }
+}
+
+@media screen and (min-width: 601px) and (max-width: 1254px) {
+  .flex-div {
+    flex-direction: column;
+  }
+
+  .main-tabs {
+    position: fixed;
+    top: 90px;
+  }
+}
+
+@media screen and (min-width: 444px) and (max-width: 1024px) {
+  .flex-div {
+    flex-direction: column;
+  }
+
+  .main-tabs {
+    position: fixed;
+    top: 100px;
+  }
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  background-color: #eeeeee;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.right {
+  padding: 10px;
+  border-radius: 5px;
+  width: 100%;
+  background-color: #eeeeee;
+}
+
+.analytics{
+  display: flex;
+  flex-direction: row;
+  gap:10px;
+}
+
+.totalUsers{
+  background-color: #ffffff;
+  padding: 20px 20px;
+  border-radius: 5px;
+    text-align: start;
+    width: 50%;
+}
+
+.totalUsers h2{
+  font-size: xx-large;
+  font-weight: 700;
+  margin-top: 10px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.fixed {
+  position: sticky;
+  top: 0;
+  background: white;
+  z-index: 10;
+  padding: 10px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  margin-bottom: 2px;
+  border-bottom: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.scrollable {
+  max-height: auto;
+  overflow-x: hidden;
+  display: block;
+  margin-top: 10px;
+  background-color: white;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.user-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.164);
+}
+
+.user-table th,
+.user-table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+  min-height: 10%;
+  max-height: 20%;
+}
+
+.user-table th {
+  background: #1e1e1e;
+  font-weight: 500;
+  color: white;
+  text-transform: capitalize;
+}
+
+.user-table tr:nth-child(even) {
+  background-color: #e2e1e1; /* light grey */
+}
+
+.user-table tr:nth-child(odd) {
+  background-color: #ffffff; /* white */
+}
+
+.user-table tr:nth-child(even) button {
+  padding: 8px 12px;
+  background: #dc0606;
+  color: rgb(255, 255, 255);
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+
+button {
+  padding: 8px 12px;
+  background: #45980d;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+.add-user-btn {
+  width: 100%;
+  display: block;
+  margin: 10px auto;
+  padding: 10px 20px;
+  background: #28a745;
+  border-radius: 5px;
+  border: none;
+}
+
+.add-user-btn a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.admin-section {
+  margin-top: 60px;
+  padding: 20px;
+  border-radius: 10px;
+  background: #f9f9f9;
+}
+
+.section-title {
+  margin-bottom: 15px;
+  font-size: 22px;
+  font-weight: 600;
+  color: #333;
+  border-left: 10px solid #007bff;
+  border-right: 10px solid #007bff;
+  padding-left: 10px;
+}
+
+
+
+
+@media screen and (max-width: 600px) {
+  .flex-div {
+    flex-direction: column;
+  }
+
+  .user-table td {
+    max-width: 20px;
+    overflow-y: auto;
+  }
+
+  .left {
+    padding: 0px;
+    border: 1px solid #ccc;
+    width: 100%;
+  }
+
+  .right {
+    padding: 0px;
+    border: 1px solid #ccc;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+  .flex-div {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,63 @@
+.order-history {
+  padding: 10px;
+  width:100%;
+}
+
+.order-history-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0px;
+}
+
+.order-history-table th,
+.order-history-table td {
+  border: 1px solid #232323;
+  padding: 10px;
+  text-align: left;
+  max-width:50px;
+    overflow-y: auto;
+  overflow-x: auto;
+}
+
+.order-history-table th {
+  background-color: #161616;
+  color: aliceblue;
+}
+
+.order-history-table td {
+  overflow-y: auto;
+  overflow-x: auto;
+}
+
+.order-history-table button {
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+/* Status badges */
+.status.confirmed {
+  color: #1e8e5a;
+  font-weight: 600;
+}
+
+.status.pending {
+  color: #c77800;
+  font-weight: 600;
+}
+
+.status.cancelled {
+  color: #b42318;
+  font-weight: 600;
+}
+
+.payment.paid {
+  color: #1e8e5a;
+}
+
+.payment.pending {
+  color: #c77800;
+}
+
+.payment.failed {
+  color: #b42318;
+}
