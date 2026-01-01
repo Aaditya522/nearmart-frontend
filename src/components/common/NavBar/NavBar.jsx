@@ -54,9 +54,9 @@ const NavBar = () => {
   };
 
 
-// useEffect(() => {
-//   checkLogInOut();
-// }, [authStatus]);
+useEffect(() => {
+  checkLogInOut();
+}, [authStatus]);
 
 
 const navigate = useNavigate();
