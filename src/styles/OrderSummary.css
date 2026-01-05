@@ -1,0 +1,109 @@
+.order-summary-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #eef2ff, #f8fafc);
+  padding: 16px;
+  font-family: "Segoe UI", system-ui, sans-serif;
+}
+
+
+.order-card {
+  background: #ffffff;
+  width: 100%;
+  max-width: 420px;
+  padding: 28px;
+  border-radius: 18px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+.order-card h1 {
+  font-size: 1.8rem;
+  margin-bottom: 24px;
+  color: #1e293b;
+}
+
+.order-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 0;
+  border-bottom: 1px dashed #e5e7eb;
+  font-size: 0.95rem;
+  color: #475569;
+  word-break: break-word;
+}
+
+.order-row:last-of-type {
+  border-bottom: none;
+  margin-bottom: 24px;
+}
+
+.order-row span:first-child {
+  font-weight: 600;
+  color: #334155;
+}
+
+.amount {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #16a34a;
+}
+
+
+.order-card button {
+  width: 100%;
+  padding: 14px;
+  border-radius: 12px;
+  border: none;
+  background: linear-gradient(135deg, #4f46e5, #6366f1);
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.order-card button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(79, 70, 229, 0.35);
+}
+
+.order-card button:active {
+  transform: scale(0.98);
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+@media (min-width: 768px) {
+  .order-card {
+    max-width: 500px;
+    padding: 36px;
+  }
+
+  .order-card h1 {
+    font-size: 2rem;
+  }
+}
+
+
+
+@media (min-width: 1024px) {
+  .order-card {
+    max-width: 560px;
+  }
+}

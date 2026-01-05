@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
+import "../styles/OrderSummary.css";
 const API_URL = process.env.REACT_APP_API_URL;
 
 
@@ -34,16 +35,25 @@ useEffect(() => {
   if (loading) return <p>Loading order...</p>;
 
   return (
-    <div>
-      <h1>Order Summary</h1>
+<div className="order-summary-page">
+  <div className="order-card">
+    <h1>Order Summary</h1>
 
-      <p><strong>Order ID:</strong> {order._id}</p>
-      <p><strong>Total:</strong> ₹{order.totalAmount}</p>
-
-      <button onClick={() => navigate(`/payment/${order._id}`)}>
-        Proceed to Payment
-      </button>
+    <div className="order-row">
+      <span>Order ID</span>
+      <span>{order._id}</span>
     </div>
+
+    <div className="order-row">
+      <span>Total Amount</span>
+      <span className="amount">₹{order.totalAmount}</span>
+    </div>
+
+    <button onClick={() => navigate(`/payment/${order._id}`)}>
+      Proceed to Payment
+    </button>
+  </div>
+</div>
   );
 };
 
