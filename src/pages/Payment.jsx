@@ -1,5 +1,7 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useParams, useNavigate } from "react-router-dom";
+import "../styles/OrderSummary.css";
+
 const API_URL = process.env.REACT_APP_API_URL;
 
 
@@ -55,7 +57,6 @@ const API_URL = process.env.REACT_APP_API_URL;
 
 
 
-
 const Payment = () => {
   const { orderId } = useParams();
   const navigate = useNavigate();
@@ -77,13 +78,24 @@ const Payment = () => {
   };
 
   return (
-    <div>
-      <h2>Payment</h2>
-      <p>This is a demo payment gateway</p>
-      <button onClick={handlePayment}>Pay Now</button>
+    <div className="order-summary-page">
+      <div className="order-card">
+        <h1>Payment</h1>
+
+        <div className="order-row">
+          <span>Order ID</span>
+          <span>{orderId}</span>
+        </div>
+
+        <div className="order-row">
+          <span>Payment Mode</span>
+          <span>Demo Gateway</span>
+        </div>
+
+        <button onClick={handlePayment}>Pay Now</button>
+      </div>
     </div>
   );
 };
-
 
 export default Payment;
