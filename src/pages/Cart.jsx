@@ -37,7 +37,6 @@ const Cart = () => {
                 const data = await res.json();
 
                 if (data.message) {
-                    alert(data.message);
 
                     if (data.message === "Not logged in") {
                         navigate("/login");
@@ -202,7 +201,12 @@ const Cart = () => {
             <div className="cart-container">
                 {/* ================= Cart List ================= */}
                 {products.length === 0 ? (
-                    <p className="empty-cart">Your cart is empty</p>
+                      <div className="empty-cart-container">
+    <p>Your cart is empty</p>
+    <button onClick={() => navigate("/home")}>
+      Continue Shopping
+    </button>
+  </div>
                 ) : (
                     <div className="cart-list">
                         {products.map((item) => (

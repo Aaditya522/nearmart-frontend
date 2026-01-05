@@ -336,3 +336,61 @@ footer button:hover {
     font-size: large;
   }
 }
+
+
+
+
+
+
+
+.empty-cart-container {
+  min-height: 60vh;
+  width:100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+  text-align: center;
+}
+
+.empty-cart-container p {
+  font-size: 1.2rem;
+  color: #475569;
+  font-weight: 500;
+}
+
+.empty-cart-container button {
+  padding: 12px 26px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  color: #ffffff;
+  background: linear-gradient(135deg, #4f46e5, #6366f1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.empty-cart-container button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(79, 70, 229, 0.35);
+}
+
+.empty-cart-container button:active {
+  transform: scale(0.97);
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  .empty-cart-container p {
+    font-size: 1.4rem;
+  }
+}
+
+/* Laptop */
+@media (min-width: 1024px) {
+  .empty-cart-container p {
+    font-size: 1.6rem;
+  }
+}
