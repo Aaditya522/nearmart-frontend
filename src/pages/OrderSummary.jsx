@@ -11,20 +11,25 @@ const OrderSummary = () => {
   const [order, setOrder] = useState(null);
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    fetch(`API_URL/order/${orderId}`, {
-      credentials: "include",
+useEffect(() => {
+  fetch(`${API_URL}/order/${orderId}`, {
+    credentials: "include",
+  })
+    .then(async (res) => {
+      const data = await res.json();
+
+      if (!res.ok) {
+        throw new Error(data.message || "Failed to load order");
+      }
+
+      setOrder(data);
+      setLoading(false);
     })
-      .then(res => res.json())
-      .then(data => {
-        setOrder(data);
-        setLoading(false);
-      })
-      .catch(() => {
-        alert("Failed to load order");
-        navigate("/cart");
-      });
-  }, [orderId, navigate]);
+    .catch((err) => {
+      alert(err.message);
+      navigate("/cart");
+    });
+}, [orderId, navigate]);
 
   if (loading) return <p>Loading order...</p>;
 
