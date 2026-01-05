@@ -29,7 +29,7 @@ const NavBar = () => {
   };
 
   function checkRole(){
-    const res = fetch("http://localhost:5000/me", {
+    const res = fetch(`${API_URL}/me`, {
       method: "GET",
       credentials: "include",
     })

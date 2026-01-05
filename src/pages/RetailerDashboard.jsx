@@ -192,6 +192,7 @@ const RetailerDashboard = () => {
                   <img src = {`${API_URL}/uploads/${userData.shopImage}`} />
                   <h3>{userData.name}</h3>
                   <p><strong>Email:</strong> {userData.email}</p>
+                  <p><strong>Phone:</strong> {userData.phone}</p>
 
                   <p><strong>Address:</strong></p>
 

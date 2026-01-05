@@ -106,21 +106,22 @@ const Footer = () => {
             <div className="profile-content">
               <h3>{userData.name}</h3>
               <p><strong>Email:</strong> {userData.email}</p>
+              <p><strong>Phone:</strong> {userData.phone} </p>
 
               <p><strong>Address:</strong></p>
 
               {!editAddress ? (<>
-                  <p>
-                    {userData.address?.at}, {userData.address?.city} –{" "}
-                    {userData.address?.pincode}
-                  </p>
-                  <button className="edit-btn"
-                    onClick={() => setEditAddress(true)}
-                  >Edit Address</button>
-                </>
+                <p>
+                  {userData.address?.at}, {userData.address?.city} –{" "}
+                  {userData.address?.pincode}
+                </p>
+                <button className="edit-btn"
+                  onClick={() => setEditAddress(true)}
+                >Edit Address</button>
+              </>
               ) : (
                 <div className="address-edit">
-                  <input type="text" placeholder="Base Address"value={addressForm.at}
+                  <input type="text" placeholder="Base Address" value={addressForm.at}
                     onChange={(e) =>
                       setAddressForm({ ...addressForm, at: e.target.value })
                     }
@@ -161,8 +162,8 @@ const Footer = () => {
         </div>
       )}
 
-      
-  
+
+
       <footer className="footer">
         <div className="btn" onClick={() => setShowProfile((prev) => !prev)}>
           <span>👤 Profile</span>
@@ -175,7 +176,7 @@ const Footer = () => {
         <div onClick={() => navigate("/myOrders")} className="btn">
           <span>📦 Orders</span>
         </div>
-        
+
       </footer>
     </>
   );
