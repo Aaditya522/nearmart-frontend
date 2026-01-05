@@ -17,7 +17,7 @@ const Signup = () => {
     address: "",
     city: "",
     pincode: "",
-
+    phone: "",
     // Retailer-only
     shopName: "",
     productType: "",
@@ -101,6 +101,8 @@ const Signup = () => {
             <option value="user">User</option>
             <option value="retailer">Retailer</option>
           </select>
+
+          <label>Phone:<input type="text" name="phone" value={formData.phone} required onChange={handleChange}/></label>
 
           <label>Address:<input type="text" name="address" value={formData.address} required onChange={handleChange} /></label>
           <br />
