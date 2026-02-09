@@ -12,7 +12,7 @@ const API_URL = process.env.REACT_APP_API_URL;
 export default function ProductDetail() {
 
     const navigate = useNavigate();
-    const { productId } = useParams(); //  FIXED
+    const { productId } = useParams(); //  FIXED 
 
     const [product, setProduct] = useState(null);
     const [retailer, setRetailer] = useState(null);
